@@ -16,6 +16,7 @@ public class ProductDB {
         Software mySoftware = null;
         Product myProduct = null;
         Music myMusic = null;
+        Tv myTv = null;
         if (productCode.equalsIgnoreCase("java")) {
             myBook = new Book();
             myBook.setCode(productCode);
@@ -71,6 +72,16 @@ public class ProductDB {
             myMusic.setAuthor("Pink Floyd");
             myMusic.setLabel("Columbia group");
             myProduct = myMusic;
+        }
+
+        if (productCode.equalsIgnoreCase("kdl43")) {
+            myTv = new Tv();
+            myTv.setCode("KDL43F663");
+            myTv.setDescription("Wish you were here");
+            myTv.setPrice(8.00);
+            myTv.setScreenSize("55\"");
+            myTv.setManufacturer("Sony");
+            myProduct = myTv;
         }
 
         return myProduct;
