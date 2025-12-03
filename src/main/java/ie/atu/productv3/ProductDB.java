@@ -15,6 +15,7 @@ public class ProductDB {
         Book myBook = null;
         Software mySoftware = null;
         Product myProduct = null;
+        Music myMusic = null;
         if (productCode.equalsIgnoreCase("java")) {
             myBook = new Book();
             myBook.setCode(productCode);
@@ -60,6 +61,16 @@ public class ProductDB {
             mySoftware.setPrice(54.50);
             mySoftware.setVersion("Oracle 3.0");
             myProduct = mySoftware;
+        }
+
+        if (productCode.equalsIgnoreCase("pink")) {
+            myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("Wish you were here");
+            myMusic.setPrice(8.00);
+            myMusic.setAuthor("Pink Floyd");
+            myMusic.setLabel("Columbia group");
+            myProduct = myMusic;
         }
 
         return myProduct;
